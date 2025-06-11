@@ -1,0 +1,289 @@
+:root {
+    /* Variables de polices */
+    --font-title: 'Playfair Display', serif;
+    --font-subtitle: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+    --font-button: 'Poppins', sans-serif;
+    --font-menu: 'Lato', sans-serif;
+    --font-footer: 'Lato', sans-serif;
+
+  /* Variables de tailles */
+    --size-h1: 2.8rem;
+    --size-h2: 2rem;
+    --size-h3: 1.6rem;
+    --size-h4: 1.3rem;
+    --size-body: 1rem;
+    --size-button: 1rem;
+    --size-menu: 1.1rem;
+    --size-footer: 0.9rem;
+
+  /* Variables de poids */
+    --weight-h1: 700;
+    --weight-h2: 600;
+    --weight-h3: 600;
+    --weight-h4: 400;
+    --weight-body: 400;
+    --weight-button: 600;
+    --weight-menu: 500;
+    --weight-footer: 400;
+     /* Variables de couleurs (Palette 2) */
+    --menu-bg: #2F4F4F;
+    --menu-text: #FFFFFF;
+    --menu-font: 'Lato', sans-serif;
+    --menu-font-size: 1.1rem;
+    --menu-font-weight: 500;
+
+    --title-color: #00A896;
+    --body-bg: #FDF4F5;
+    --button-bg: #FFB6C1;
+    --button-text: #000000;
+    --button-hover-bg: #2F4F4F;
+    --card-shadow: #778899;
+    --footer-bg: #191970;
+    --footer-text: #FFFFFF;
+    /* Nouvelles variables pour les liens */
+    --link-hover-bg: #00A896; 
+    --link-active-opacity: 0.8;
+    --link-active-border: #FFB6C1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--body-bg);
+    font-family: var(--font-body);
+    font-weight: var(--weight-body);
+    font-size: var(--size-body);
+    color: #333;
+    line-height: 1.6;
+}
+header{
+    background-color: var(--body-bg);
+    text-align: center;
+    
+}
+header h1{
+    font-family: var(--font-title);
+    font-size: var(--size-h1);
+    font-weight: var(--weight-h1);
+    color: var(--title-color);
+}
+.navbar{
+    background-color: var(--menu-bg);
+    padding: 1rem;
+}
+
+.navbar{
+    font-family: var(--font-menu);
+    font-size: var(--size-menu);
+    font-weight: var(--weight-menu);
+    background-color: var(--menu-bg);
+    color: var(--menu-text);
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.navbar ul li {
+    margin: 0 1.2rem;
+}
+.navbar ul li a{
+    font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
+    font-weight: var(--menu-font-weight);
+    color: var(--menu-text);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    display: block;
+    transition: background-color 0.3s ease, opacity 0.2s ease;
+}
+.navbar ul li a:hover{
+    background-color: var(--link-hover-bg);
+    border-radius: 4px;
+}
+.navbar ul li a:active{
+    opacity: var(--link-active-opacity);
+}
+.navbar ul li a.active{
+    border-bottom: 2px solid var(--link-active-border);
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-h2);
+  color: var(--title-color);
+}
+
+h3 {
+  font-family: var(--font-subtitle);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-h3);
+  color: var(--title-color);
+}
+
+h4 {
+  font-family: var(--font-subtitle);
+  font-size: var(--size-h4);
+  font-weight: var(--weight-h4);
+  color: var(--title-color);
+}
+/* Style pour le main*/
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
+  gap: 2rem; /* Espacement entre les colonnes */
+  align-items: center; /* Centrer verticalement */
+  margin-bottom: 2rem;
+}
+
+.intro-text {
+  padding: 1.5rem;
+}
+
+.intro-text h2 {
+  font-family: var(--font-title);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-h2);
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  margin-bottom: 1.5rem;
+}
+
+.btn-download {
+  display: inline-block;
+  font-family: var(--font-button);
+  font-size: var(--size-button);
+  font-weight: var(--weight-button);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Coins arrondis pour la photo */
+  box-shadow: 0 4px 4px var(--card-shadow); /* Ombre cohérente */
+  object-fit: cover; /* S’assurer que l’image s’adapte bien */
+  max-height: 400px; /* Limiter la hauteur */
+}
+
+button{
+    font-family: var(--font-button);
+    font-size: var(--size-button);
+    font-weight: var(--weight-button);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+form label {
+  font-family: var(--font-body);
+  margin-bottom: 0.5rem;
+}
+form input, form textarea {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  align-self: flex-start;
+}
+
+button:hover{
+    background-color: var(--button-hover-bg);
+}
+
+.card{
+    box-shadow: var(--card-shadow);
+}
+
+footer{
+    font-family: var(--font-footer);
+    font-size: var(--size-footer);
+    font-weight: var(--weight-footer);
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    margin-top: 1rem;
+    display: flex;
+    padding: 1rem 1.2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 0.5rem 0; 
+  }
+
+  .navbar ul li a {
+    font-size: calc(var(--menu-font-size) * 0.9); 
+    padding: 0.4rem 0.8rem;
+  }
+  main {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  footer {
+    padding: 1rem 0.5rem;
+  }
+
+  .intro {
+  display: grid;
+  grid-template-columns: 1fr; 
+  
+}
+}
