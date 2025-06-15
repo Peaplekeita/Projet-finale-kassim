@@ -33,9 +33,9 @@ function setActiveLink() {
   links.forEach(link => {
     
     const hreff = link.getAttribute("href") || "";
-    console.log(hreff)
-    let normalizedHref = hreff.startsWith("..")?`${hreff.slice(2)}`:`/${hreff}`;
     
+    let normalizedHref = hreff.startsWith("..")?`/Projet-finale-kassim${hreff.slice(2)}`:`/Projet-finale-kassim/${hreff}`;
+    console.log(normalizedHref)
     
     // Comparaison exacte (ou gérer la page d'accueil)
     if (normalizedHref === currentPath || (currentPath === "/" && normalizedHref === "/index")) {
