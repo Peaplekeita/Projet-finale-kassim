@@ -12,53 +12,91 @@
 </head>
 <body>
   <header>
-    <h1>[Titre principal de la page]</h1>
+    <p><img src="/img/logos/logo_site.png" alt="mon logo principal" class="logo-site"></p>
+    <h1><span id="logo-title">Portfolio de</span> Kassim KEITA</h1>
   </header>
-
   <nav class="navbar">
+    <button id="menu-toggle">☰</button>
     <ul>
-      <li><a href="../index.html" [class="active" aria-current="page"]>Accueil</a></li>
-      <li><a href="../pages/about.html">À propos</a></li>
-      <li><a href="../pages/skills.html">Compétences</a></li>
-      <li><a href="../pages/projects.html">Projets</a></li>
-      <li><a href="../pages/loisirs.html">Hobbies</a></li>
-      <li><a href="../pages/sports.html">Activités sportives</a></li>
-      <li><a href="../pages/contact.html">Contact</a></li>
+      <li><a href="../index.html" class="link-portfolio">Accueil</a></li>
+      <li><a href="../pages/about.html" class="link-portfolio">À propos</a></li>
+      <li><a href="../pages/skills.html" class="link-portfolio">Compétences</a></li>
+      <li><a href="../pages/projects.html" class="link-portfolio">Projets</a></li>
+      <li><a href="../pages/loisirs.html" class="link-portfolio">Hobbies</a></li>
+      <li><a href="../pages/sports.html" class="link-portfolio">Activités sportives</a></li>
+      <li><a href="../pages/contact.html" class="link-portfolio">Contact</a></li>
     </ul>
   </nav>
 
   <main>
     <!-- Contenu spécifique à chaque page -->
-     <h2>Portfolio de mes travaux</h2>
-    <section>
-      <article class="card">
-          <h3>Projet 1 : [Calculateur de prêt hypothécaire]</h3>
-          <div>
-            <h4>Description</h4>
-          </div>
-          <div>
-            <h4>technologies utilisées</h4>
-            <p>Les technologies utilisées poour ce projet sont entre autre:
-        
-            </p>
-          </div>
-          <div>
-            <h4>Compétences utilisé</h4>
-          </div>
-      </article>
-      <article class="card">
-          <h3>Projet 2 : [Nom du projet]</h3>
-          <div>
-            <h4>Description</h4>
-          </div>
-          <div>
-            <h4>technologies utilisées</h4>
-          </div>
-          <div>
-            <h4>Compétences utilisé</h4>
-          </div>
-      </article>
-  </section>
+     
+     <div class="principale-text">
+        <img src="/img/logos/logo_projets__.jpg" alt="Logo projets" class="logos">
+        <h2>Portfolio de mes travaux</h2>
+    </div>
+        <section>
+            <article class="card">
+                <h3>Projet 1 : [Calculateur de prêt hypothécaire]</h3>
+                <div class="projects-text">
+                  <h4>Objectif</h4>
+                  <p>Concevoir une application web simple permettant de calculer automatiquement le paiement mensuel d'un prêt hypothécaire à partir de données saisies par l'utilisateur.</p>
+                </div>
+                <div class="projects-text">
+                  <h4>Fonctionnalités développées :</h4>
+                  <p>Interface HTML avec champs de saisie pour le montant du prêt, le taux d'intérêt annuel et la durée du prêt.</p>
+                  <p>Script JavaScript pour effectuer le calcul du paiement mensuel à l'aide de la formule mathématique standard.</p>
+                  <p>Validation des données saisies (valeurs positives, formats valides).</p>
+                  <p>Gestion des erreurs utilisateur via des boîtes d'alerte conviviales.</p>
+                  <p>Tests fonctionnels avec différents scénarios d'entrée.</p>
+                </div>
+                <div class="projects-text">
+                  <h4>Compétences acquises</h4>
+                  <div>
+                    <p>Intégration HTML/CSS/JavaScript dans un projet fonctionnel.</p>
+                    <p>Manipulation du DOM, gestion des événements et calculs dynamiques en JavaScript.</p>
+                    <p>Validation des formulaires et gestion des erreurs.</p>
+                    <p>Amélioration de l'expérience utilisateur avec une interface simple et intuitive.</p>
+                  </div>
+                </div>
+                <div class="projects-text">
+                  <h4>Outils utilisés :</h4>
+                  <div>
+                    <p>Visual Studio Code pour l'écriture et l'organisation du code.</p>
+                    <p>HTML5, CSS3, JavaScript pour le développement.</p>
+                    <p>Navigateurs web pour les tests (Chrome, Firefox, etc.)</p>
+                  </div>
+                </div>
+                <button type="button">Acceder au projet</button>
+            </article>
+          <article class="card">
+              <h3>Projet : Manipulation de dates avec JavaScript</h3>
+              <div class="projects-text">
+                <h4>Objectif :</h4> 
+                <p>Créer une interface utilisateur permettant de saisir une date, d'en extraire ses composants (jour, mois, année) et de calculer la différence en jours avec la date actuelle.</p>
+              </div>
+              
+              <div class="projects-text">
+                  <h4>Fonctionnalités développées :</h4>
+                  <p> Formulaire HTML permettant la saisie d'une date au format "JJ-MM-AAAA"</p>
+                  <p> Conversion de la date saisie en objet Date JavaScript</p>
+                  <p> Calcul en temps réel de la différence de jours entre la date saisie et la date du jour</p>
+              </div>
+              <h4>Compétences acquises :</h4>
+              <div class="projects-text">
+                  <p>Maîtrise de la manipulation du DOM pour récupérer et afficher dynamiquement des données</p>
+                  <p>Utilisation approfondie du constructeur Date() de JavaScript</p>
+                  <p>Gestion du format de date personnalisé (français)</p>
+                  <p>Mise en œuvre de calculs temporels (différence en millisecondes, conversion en jours)</p>
+                  <p>Débogage et validation côté client pour garantir une expérience utilisateur fluide</p>
+              </div>
+              <div class="projects-text">
+                <h4>Outils utilisés :</h4>
+                <p>HTML5, CSS, JavaScript pur, navigateur Web (affichage interactif du résultat)</p>
+              </div> 
+              <button type="button">Acceder au projet</button>
+          </article>
+        </section>
   </main>
 
   <footer>

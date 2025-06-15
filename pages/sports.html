@@ -12,26 +12,43 @@
 </head>
 <body>
   <header>
-    <h1>[Titre principal de la page]</h1>
+    <p><img src="/img/logos/logo_site.png" alt="mon logo principal" class="logo-site"></p>
+    <h1><span id="logo-title">Portfolio de</span> Kassim KEITA</h1>
   </header>
-
   <nav class="navbar">
+    <button id="menu-toggle">☰</button>
     <ul>
-      <li><a href="../index.html" [class="active" aria-current="page"]>Accueil</a></li>
-      <li><a href="../pages/about.html">À propos</a></li>
-      <li><a href="../pages/skills.html">Compétences</a></li>
-      <li><a href="../pages/projects.html">Projets</a></li>
-      <li><a href="../pages/loisirs.html">Hobbies</a></li>
-      <li><a href="../pages/sports.html">Activités sportives</a></li>
-      <li><a href="../pages/contact.html">Contact</a></li>
+      <li><a href="../index.html" class="link-portfolio">Accueil</a></li>
+      <li><a href="../pages/about.html" class="link-portfolio">À propos</a></li>
+      <li><a href="../pages/skills.html" class="link-portfolio">Compétences</a></li>
+      <li><a href="../pages/projects.html" class="link-portfolio">Projets</a></li>
+      <li><a href="../pages/loisirs.html" class="link-portfolio">Hobbies</a></li>
+      <li><a href="../pages/sports.html" class="link-portfolio">Activités sportives</a></li>
+      <li><a href="../pages/contact.html" class="link-portfolio">Contact</a></li>
     </ul>
   </nav>
 
   <main>
     <!-- Contenu spécifique à chaque page -->
     <section>
-      <h2>[Sous-titre ou introduction]</h2>
-      <p>[Contenu principal de la page]</p>
+      <div class="principale-text">
+        <img src="/img/logos/logo_parcours.png" alt="Logo mon parcours" class="logos">
+        <h2>Activités Sportives</h2>
+      </div>
+      <article class="card">
+        <div class="projects-text">
+          <h3>Gymnastique</h3>
+          <p>Gymnastique La gymnastique développe à la fois la souplesse, la coordination et la maîtrise du corps. Cette pratique m'a appris la précision dans les mouvements, le contrôle de soi et la discipline — des qualités transférables dans ma façon de travailler et d'aborder les défis.</p>
+        </div>
+        <div class="projects-text">
+          <h3>Karaté</h3>
+          <p>Le karaté m'apporte rigueur mentale, respect et persévérance. C'est une discipline qui renforce non seulement le corps, mais aussi l'esprit, en cultivant la concentration, la maîtrise de soi et la réactivité.</p>
+        </div>
+        <div class="projects-text">
+          <h3>Course à pied</h3>
+          <p>La course m'aide à renforcer mon endurance physique et mentale. Elle m'enseigne la régularité, la gestion de l'effort dans la durée et le goût du dépassement de soi, autant d'atouts que je mobilise dans mes projets et engagements.</p>
+        </div>
+      </article>
     </section>
   </main>
 

@@ -12,32 +12,59 @@
 </head>
 <body>
   <header>
-    <h1>[Titre principal de la page]</h1>
+    <p><img src="/img/logos/logo_site.png" alt="mon logo principal" class="logo-site"></p>
+    <h1><span id="logo-title">Portfolio de</span> Kassim KEITA</h1>
   </header>
-
   <nav class="navbar">
+    <button id="menu-toggle">☰</button>
     <ul>
-      <li><a href="../index.html" [class="active" aria-current="page"]>Accueil</a></li>
-      <li><a href="../pages/about.html">À propos</a></li>
-      <li><a href="../pages/skills.html">Compétences</a></li>
-      <li><a href="../pages/projects.html">Projets</a></li>
-      <li><a href="../pages/loisirs.html">Hobbies</a></li>
-      <li><a href="../pages/sports.html">Activités sportives</a></li>
-      <li><a href="../pages/contact.html">Contact</a></li>
+      <li><a href="../index.html" class="link-portfolio">Accueil</a></li>
+      <li><a href="../pages/about.html" class="link-portfolio">À propos</a></li>
+      <li><a href="../pages/skills.html" class="link-portfolio">Compétences</a></li>
+      <li><a href="../pages/projects.html" class="link-portfolio">Projets</a></li>
+      <li><a href="../pages/loisirs.html" class="link-portfolio">Hobbies</a></li>
+      <li><a href="../pages/sports.html" class="link-portfolio">Activités sportives</a></li>
+      <li><a href="../pages/contact.html" class="link-portfolio">Contact</a></li>
     </ul>
   </nav>
-
   <main>
     <!-- Contenu spécifique à chaque page -->
     <section>
-    <h2>Technologies maîtrisées</h2>
+    <div class="principale-text">
+        <img src="/img/logos/logo_technologies.jpg" alt="Logo projets" class="logos">
+        <h2>Technologies maîtrisées</h2>
+    </div>
     <div class="card">
       <h3>Front-end</h3>
-      <p>HTML5, CSS3, JavaScript</p>
+      <div class="skills-text">
+        <h4>Compétences en HTML5</h4>
+        <p>
+          Bonne maîtrise du langage HTML5, avec une compréhension approfondie du balisage et de la sémantique des balises. Capacité à structurer des pages web en utilisant des balises adaptées, à intégrer des liens hypertextes, des images, des tableaux et des formulaires. À l'aise avec l'ajout d'éléments de formulaire (champs de saisie, boutons, etc.) en fonction des types de données, conformément aux standards du web
+        </p>
+      </div>
+      <div class="skills-text">
+        <h4>Compétences en CSS</h4>
+        <p>Bonne maîtrise des feuilles de style CSS pour la mise en forme de pages web esthétiques et cohérentes. Capacité à utiliser efficacement les différents types de sélecteurs (classe, ID, élément) pour styliser précisément les balises HTML et assurer une présentation harmonieuse du contenu.</p>
+      </div>
+      <div class="skills-text">
+        <h4>Compétences en JavaScript</h4>
+        <p>Capacité à intégrer du JavaScript dans des pages HTML pour rendre les interfaces interactives. Maîtrise des variables, opérateurs, structures conditionnelles, boucles et tableaux. Compétent dans l'écriture de fonctions modulaires, ainsi que dans l'utilisation des objets standards (Math, String, Date, Array) pour effectuer des opérations courantes et manipuler efficacement les données.</p>
+      </div>
+      <div class="skills-text">
+        <h4>Projet Portfolio Web</h4>
+        <p>Réalisation d'un site web personnel mettant en œuvre les compétences acquises en HTML5, CSS3 et JavaScript. Conception de pages HTML bien structurées, application de styles CSS cohérents (palette de couleurs, typographie) et ajout de fonctionnalités interactives via JavaScript (validation de formulaires, effets visuels). Ce projet concret a permis de renforcer ma compréhension du développement web et de me confronter à un flux de travail réaliste.</p>
+      </div>
     </div>
     <div class="card">
       <h3>Outils</h3>
-      <p>Git, VS Code, Figma</p>
+      <div>
+        <h4>Environnement de développement - Visual Studio Code</h4>
+        <p>Utilisation optimale de l'éditeur Visual Studio Code pour le développement web : gestion efficace des extensions, navigation fluide dans les fichiers, utilisation des fonctionnalités avancées ( terminal intégré, coloration syntaxique, auto-complétion, débogage) pour accélérer l'écriture et la maintenance du code HTML, CSS et JavaScript.</p>
+      </div>
+      <div>
+        <h4>Contrôle de version - Git & GitHub</h4>
+        <p>Maîtrise des commandes de base de Git pour le suivi des versions, la gestion des branches et la collaboration. Utilisation de GitHub pour héberger des projets, effectuer des commits, pousser du code, cloner des dépôts et collaborer efficacement via pull requests.</p>
+      </div>
     </div>
   </section>
   </main>

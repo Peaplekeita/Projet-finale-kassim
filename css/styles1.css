@@ -62,26 +62,28 @@ body{
 }
 header{
     background-color: var(--body-bg);
-    text-align: center;
-    
-}
-header h1{
-    font-family: var(--font-title);
-    font-size: var(--size-h1);
-    font-weight: var(--weight-h1);
-    color: var(--title-color);
-}
-.navbar{
-    background-color: var(--menu-bg);
-    padding: 1rem;
-}
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    }
+  .logo-site{
+    max-width: 100px;
+  }
+  #logo-title{
+    color: var(--button-bg);
+  }
+ 
 .navbar{
     font-family: var(--font-menu);
     font-size: var(--size-menu);
     font-weight: var(--weight-menu);
     background-color: var(--menu-bg);
     color: var(--menu-text);
+    padding: 1rem;
+}
+.navbar #menu-toggle{
+    display: none;
 }
 .navbar ul{
     list-style: none;
@@ -119,6 +121,17 @@ h2 {
   font-size: var(--size-h2);
   font-weight: var(--weight-h2);
   color: var(--title-color);
+  text-align: center;
+}
+.principale-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.logos{
+  max-width: 90px;
+  background-color: var(--body-bg);
 }
 
 h3 {
@@ -159,6 +172,7 @@ main {
   font-weight: var(--weight-h2);
   color: var(--title-color);
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .intro-text p {
@@ -215,6 +229,7 @@ form {
   flex-direction: column;
   max-width: 500px;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 form label {
   font-family: var(--font-body);
@@ -236,8 +251,40 @@ button:hover{
     background-color: var(--button-hover-bg);
 }
 
+
 .card{
-    box-shadow: var(--card-shadow);
+    max-width:90% ;
+    border-bottom: 1px solid var(--menu-bg);
+    margin: 1.5rem auto;
+    padding: 1.2rem;
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+.colonne{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2.2rem;
+}
+.colonne img{
+  max-width: 50%;
+}
+.projects-text, .skills-text{
+  margin-bottom: 1.1rem;
+  font-family: var(--font-body);
+}
+.principale-text{
+  padding-right: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.1rem;
+
+}
+
+.projects-text p, .skills-text p{
+  margin-left: 1rem;
+  line-height: 1.5;
 }
 
 footer{
@@ -254,14 +301,36 @@ footer{
     justify-content: center;
     gap: 1.4rem;
 }
+footer p a{
+  font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
+    font-weight: var(--menu-font-weight);
+    color: var(--menu-text);
+    text-decoration: none;
+    color: var(--button-bg);
+    transition: color 0.3s ease;
+}
+footer p a:hover{
+  color: #5bc124;
+}
 
 
 
 
 @media (max-width: 768px) {
+ .navbar #menu-toggle{
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
   .navbar ul {
     flex-direction: column; 
     align-items: center;
+    display: none;
+  }
+  .navbar ul.active{
+    display: block;
   }
 
   .navbar ul li {
@@ -285,5 +354,13 @@ footer{
   display: grid;
   grid-template-columns: 1fr; 
   
+}
+.colonneTexte{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+img[alt="logo a propos de moi même"]{
+  max-width: 90%;
 }
 }

@@ -1,34 +1,44 @@
-//const links = document.querySelectorAll(".navbar ul li a");
-//const path = window.location.pathname;
-//
-//
-//links.forEach(
-//    link =>{
-//        if(link.href.includes(path)){
-//            link.classList.add("active");
-//        }else{
-//            link.classList.remove('active')
-//        }
-//    }
-//)
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.querySelector("#menu-toggle");
+  const menu = document.querySelector(".navbar ul");
+
+  if (!toggleButton || !menu) {
+    console.error("Bouton ou menu introuvable.");
+    return;
+  }
+
+  toggleButton.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    // Optionnel : Mettre à jour le texte/aria pour accessibilité
+    const isMenuOpen = menu.classList.contains("active");
+    toggleButton.textContent = isMenuOpen ? "✕ Fermer" : "☰ Menu";
+    toggleButton.setAttribute("aria-expanded", isMenuOpen);
+  });
+});
 
 
 
 function setActiveLink() {
   // Récupérer tous les liens de navigation
-  const links = document.querySelectorAll(".link-portfolio");
+  const links = document.querySelectorAll(".navbar ul a");
+  
   const currentPath = window.location.pathname || "/"; 
+  console.log(currentPath);
+  
 
   // Supprimer la classe .active de tous les liens
   links.forEach(link => link.classList.remove("active"));
 
   // Ajouter la classe .active au lien correspondant
   links.forEach(link => {
-    const href = link.getAttribute("href") || "";
-    // Normaliser les chemins pour gérer les URLs relatives/absolues
-    const normalizedHref = href.startsWith("/") ? href : `/${href}`;
+    const hreff = link.getAttribute("href") || "";
+    
+    let normalizedHref = hreff.startsWith("..")?`${hreff.slice(2)}`:`/${hreff}`;
+    
+    
     // Comparaison exacte (ou gérer la page d'accueil)
-    if (normalizedHref === currentPath || (currentPath === "/" && href === "/home")) {
+    if (normalizedHref === currentPath || (currentPath === "/" && normalizedHref === "/index")) {
       link.classList.add("active");
     }
   });
