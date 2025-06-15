@@ -32,6 +32,7 @@ function setActiveLink() {
 
   // Ajouter la classe .active au lien correspondant
   links.forEach(link => {
+    console.log(link)
     const hreff = link.getAttribute("href") || "";
     
     let normalizedHref = hreff.startsWith("..")?`${hreff.slice(2)}`:`/${hreff}`;
