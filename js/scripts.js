@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function setActiveLink() {
   // Récupérer tous les liens de navigation
   const links = document.querySelectorAll(".navbar ul a");
-  
   const currentPath = window.location.pathname || "/"; 
   console.log(currentPath);
   
@@ -32,9 +31,9 @@ function setActiveLink() {
 
   // Ajouter la classe .active au lien correspondant
   links.forEach(link => {
-    console.log(link)
-    const hreff = link.getAttribute("href") || "";
     
+    const hreff = link.getAttribute("href") || "";
+    console.log(hreff)
     let normalizedHref = hreff.startsWith("..")?`${hreff.slice(2)}`:`/${hreff}`;
     
     
