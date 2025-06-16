@@ -349,6 +349,12 @@ footer p a:hover{
             padding: auto 2rem;
             color: var(--link-hover-bg);
         }
+        #montaInfo, #tauxInfo, #dureeInfo{
+          font-style: italic;
+          color: red;
+          font-size: 0.8rem;
+          opacity: 0.4;
+        }
 
 /** fin style de calculateur***/
 

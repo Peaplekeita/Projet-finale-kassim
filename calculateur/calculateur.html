@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice 6 : Projet final - Calculateur de prêt hypothécaire</title>
-    <link rel="stylesheet" href="../../css/styles1.css">
+    <link rel="stylesheet" href="../css/styles1.css">
     <style>
         
     </style>
@@ -34,12 +34,12 @@
                     <input type="text" name="myMontant" required id="myMontant" placeholder="Montant du prêt en chiffres">
                 </div>
                 <div>
-                    <label for="myTauxInteret"> Saisir le taux d'intérêt annuel :</label>
+                    <label for="myTauxInteret"> Saisir le taux d'intérêt annuel(en %) :</label>
                     <div id="tauxInfo"></div>
                     <input type="text" name="myTauxInteret" required id="myTauxInteret" placeholder="Taux d'interêt">
                 </div>
                 <div>
-                    <label for="myDuree"> Saisir  la durée en années :</label>
+                    <label for="myDuree"> Saisir  la durée (nombres de mois) :</label>
                     <div id="dureeInfo"></div>
                     <input type="number" name="myDuree" required id="myDuree" placeholder="durée du prêt">
                 </div>
@@ -56,7 +56,7 @@
                let  r = taux/(12*100);
                 let num = p*(r*(1+r)**n);
                 let denom = (1 + r)**n -1;
-                return num/denom;
+                return Math.ceil(num/denom);
             }
 
         // Fonction qui contrôle les saisis et appelle la fonction qui calcule la mensualité
@@ -96,7 +96,7 @@
             let montantMois = CalculerMontantt(p, t, nbrMois);
             let divText = document.querySelector(".montantInfo");
             let text = (montantMois)?`${montantMois}`:'Données incorrecte';
-            divText.innerHTML = `<span>La mensualité est de : ${text}</span>`;
+            divText.innerHTML = `<span>La mensualité est de : ${text} FCFA</span>`;
         }
 
         function remouveElement(){
