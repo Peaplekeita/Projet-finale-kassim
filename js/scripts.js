@@ -1,4 +1,4 @@
-// script.js
+// script pour la gestion du menu déroulant
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector("#menu-toggle");
   const menu = document.querySelector(".navbar ul");
@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+//Script pour gerer la selection du menu
+// Ce script active ou désactive la class .active en fonction window.location.pathname
 function setActiveLink() {
   // Récupérer tous les liens de navigation
   const links = document.querySelectorAll(".navbar ul a");
@@ -34,6 +35,7 @@ function setActiveLink() {
     
     const hreff = link.getAttribute("href") || "";
     
+    // Cette normalisation est lies a la structure du lien
     let normalizedHref = hreff.startsWith("..")?`/Projet-finale-kassim${hreff.slice(2)}`:`/Projet-finale-kassim/${hreff}`;
     console.log(normalizedHref)
     
@@ -44,5 +46,5 @@ function setActiveLink() {
   });
 }
 
-// Exécuter au chargement de la page
+// le script est executé a chaque réchagement de page
 document.addEventListener("DOMContentLoaded", setActiveLink);
