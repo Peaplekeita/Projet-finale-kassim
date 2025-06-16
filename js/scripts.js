@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggleButton.addEventListener("click", () => {
     menu.classList.toggle("active");
-    // Optionnel : Mettre à jour le texte/aria pour accessibilité
+   
     const isMenuOpen = menu.classList.contains("active");
     toggleButton.textContent = isMenuOpen ? "✕ Fermer" : "☰ Menu";
     toggleButton.setAttribute("aria-expanded", isMenuOpen);

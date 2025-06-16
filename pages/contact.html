@@ -33,7 +33,7 @@
         <h2>Formulaire de contact</h2>
     </div>
     <section class="card">
-    <form>
+    <form id="contact-form">
       <label for="name">Nom :</label>
       <input type="text" id="name" name="name" required>
       <label for="email">Email :</label>
@@ -42,6 +42,35 @@
       <textarea id="message" name="message" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      const MY_USER_ID = "YsiDgBIfKtQRJc5Nn";
+      const MY_SERVICE_ID ="service_co3niwd";
+      const MY_TEMPLATE_ID = "template_ifoe7di";
+
+      const form = document.getElementById("contact-form");
+
+      function initEmailJs(){
+        emailjs.init(MY_USER_ID);
+      }
+      initEmailJs();
+      form.addEventListener(
+        'submit',
+        function(e){
+          e.preventDefault();
+          emailjs.sendForm(MY_SERVICE_ID, MY_TEMPLATE_ID, form)
+          .then(
+            ()=>{
+              alert("Message envoyer avec succès !");
+              form.reset();
+            },
+            (error)=>{
+              alert(`Erreur d'envoie: ${JSON.stringify(error)}`);
+            }
+          )
+        }
+      )
+    </script>
   </section>
   </main>
 

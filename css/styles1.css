@@ -181,7 +181,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.btn-download {
+.btn-download, #btnCalculateur1 {
   display: inline-block;
   font-family: var(--font-button);
   font-size: var(--size-button);
@@ -194,7 +194,7 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.btn-download:hover {
+.btn-download:hover, #btnCalculateur1:hover {
   background-color: var(--button-hover-bg);
 }
 
@@ -314,6 +314,43 @@ footer p a:hover{
   color: #5bc124;
 }
 
+/** style du projet de calculauer de prêt*/
+
+.Calculateur{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+        .Calculateur form{
+            
+            width: 100%;
+            padding:  auto 2rem;
+        }
+        .Calculateur form input[type="text"]{
+            width: 90%;
+
+        }
+        .Calculateur form label{
+            font-size: larger;
+            font-weight: bolder;
+            margin-bottom: 1.2rem;
+        }
+        .Calculateur .montantInfo{
+            box-shadow: 0 0px 8px var(--card-shadow);
+            height: 30%;
+            margin-top: 3rem;
+            margin-right: 3rem;
+            padding: auto 3rem;
+            text-align: center;
+            font-size: var(--menu-font-size);
+            
+        }
+        .Calculateur .montantInfo span{
+            padding: auto 2rem;
+            color: var(--link-hover-bg);
+        }
+
+/** fin style de calculateur***/
 
 
 
@@ -345,6 +382,9 @@ footer p a:hover{
     margin: 1rem auto;
     padding: 0 0.5rem;
   }
+  .principale-text{
+    gap: 1rem;
+  }
 
   footer {
     padding: 1rem 0.5rem;
@@ -362,5 +402,17 @@ footer p a:hover{
 }
 img[alt="logo a propos de moi même"]{
   max-width: 90%;
+}
+
+.Calculateur{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.Calculateur .montantInfo{
+  margin-top: 0;
+  padding: 1.5rem;
 }
 }
