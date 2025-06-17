@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice 6 : Projet final - Calculateur de prêt hypothécaire</title>
     <link rel="stylesheet" href="../css/styles1.css">
-    <style>
-        
-    </style>
+    <script src="../js/scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,7 +17,6 @@
     <ul>
       <li><a href="../index.html" class="link-portfolio">Accueil</a></li>
       <li><a href="../pages/projects.html" class="link-portfolio">Projets</a></li>
-      
     </ul>
   </nav>
     <main>
@@ -58,8 +55,6 @@
                 let denom = (1 + r)**n -1;
                 return Math.ceil(num/denom);
             }
-
-        // Fonction qui contrôle les saisis et appelle la fonction qui calcule la mensualité
         function principale(){
             let montantDePret = window.document.myCalculateur.myMontant.value.trim();
             let tauxDePret = window.document.myCalculateur.myTauxInteret.value.trim();
@@ -68,8 +63,6 @@
             let p = parseInt(montantDePret);
             let t = parseInt(tauxDePret);
             let nbrMois = parseInt(nombreMoiDePret)
-            
-
             if(isNaN(p)){
                 let divElement = document.querySelector("#montaInfo");
                 divElement.innerHTML =="";
